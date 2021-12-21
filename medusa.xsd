@@ -1,36 +1,33 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="medusa-ui" type="medusa-uiType"/>
-<xs:complexType name = "m:elseifType">
+<xs:element name = "medusa-ui">
+<xs:complexType>
 <xs:sequence>
-<xs:element type = "anyType" name = "any"/>
- </xs:sequence>
+<xs:element name = "foreach">
+<xs:complexType>
+<xs:sequence>
+<xs:element name = "if">
+<xs:complexType>
+<xs:sequence>
+<xs:element  name = "elseif">
+<xs:complexType >
+<xs:simpleContent>
+<xs:extension base = "xs:byte">
 <xs:attribute type="xs:string" name="conditionItem"/>
+</xs:extension>
+</xs:simpleContent>
 </xs:complexType>
-<xs:complexType name = "m:elseType">
-<xs:sequence>
-<xs:element type = "anyType" name = "any"/>
- </xs:sequence>
-</xs:complexType>
-<xs:complexType name = "m:ifType">
-<xs:sequence>
-<xs:element type = "anyType" name = "any"/>
-<xs:element type = "m:elseifType" name = "m:elseif"/>
-<xs:element type = "m:elseType" name = "m:else"/>
+</xs:element>
+<xs:element type = " xs: byte" name = "else"/>
  </xs:sequence>
 <xs:attribute type="xs:string" name="condition"/>
 </xs:complexType>
-<xs:complexType name = "m:foreachType">
-<xs:sequence>
-<xs:element type = "anyType" name = "any"/>
-<xs:element type = "m:ifType" name = "m:if"/>
+</xs:element>
  </xs:sequence>
 <xs:attribute type="xs:string" name="collection"/>
 </xs:complexType>
-<xs:complexType name = "medusa-uiType" >
-<xs:sequence>
-<xs:element type = "m:textType" name = "m:text"/>
-<xs:element type = "m:foreachType" name = "m:foreach"/>
+</xs:element>
  </xs:sequence>
-<xs:attribute type = "xs:string" name = "xmlns:m"/>
+<xs:attribute type = "xs:string" name = "xmlns"/>
 </xs:complexType>
- </xs:schema>
+</xs:element>
+</xs:schema>
