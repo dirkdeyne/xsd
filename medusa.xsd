@@ -1,23 +1,26 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name = "html">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://medusa-ui.dev">
+<xs:element name = "medusa">
 <xs:complexType>
 <xs:sequence>
-<xs:element name = "foreach">
+<xs:element name = "foreach"  maxOccurs="unbounded" minOccurs="0" >
 <xs:complexType>
 <xs:sequence>
 <xs:element name = "if">
 <xs:complexType>
 <xs:sequence>
-<xs:element  name = "elseif">
-<xs:complexType >
-<xs:simpleContent>
-<xs:extension base = "xs:byte">
+<xs:element name = "elseif">
+<xs:complexType>
+<xs:sequence>
+ </xs:sequence>
 <xs:attribute type="xs:string" name="conditionItem"/>
-</xs:extension>
-</xs:simpleContent>
 </xs:complexType>
 </xs:element>
-<xs:element type = " xs: byte" name = "else"/>
+<xs:element name = "else">
+<xs:complexType>
+<xs:sequence>
+ </xs:sequence>
+</xs:complexType>
+</xs:element>
  </xs:sequence>
 <xs:attribute type="xs:string" name="condition"/>
 </xs:complexType>
@@ -26,8 +29,14 @@
 <xs:attribute type="xs:string" name="collection"/>
 </xs:complexType>
 </xs:element>
+<xs:element name = "if">
+<xs:complexType>
+<xs:sequence>
  </xs:sequence>
-<xs:attribute type = "xs:string" name = "xmlns"/>
+<xs:attribute type="xs:string" name="condition"/>
+</xs:complexType>
+</xs:element>
+ </xs:sequence>
 </xs:complexType>
 </xs:element>
 </xs:schema>
