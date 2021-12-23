@@ -1,5 +1,5 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://medusa-ui.dev">
-<xs:element name = "medusa">
+<xs:element name = "html">
 <xs:complexType>
 <xs:sequence>
 <xs:element name = "foreach"  maxOccurs="unbounded" minOccurs="0" >
