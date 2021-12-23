@@ -21,7 +21,7 @@
  </xs:sequence>
 </xs:complexType>
 </xs:element>
- </xs:sequence>
+</xs:sequence>
 <xs:attribute type="xs:string" name="condition"/>
 </xs:complexType>
 </xs:element>
@@ -32,11 +32,11 @@
 <xs:element name = "if">
 <xs:complexType>
 <xs:sequence>
- </xs:sequence>
+</xs:sequence>
 <xs:attribute type="xs:string" name="condition"/>
 </xs:complexType>
 </xs:element>
- </xs:sequence>
+</xs:sequence>
 </xs:complexType>
 </xs:element>
 </xs:schema>
